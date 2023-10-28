@@ -2,6 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 import fsp from 'node:fs/promises';
 import glslify from 'glslify';
+import glsl from 'vite-plugin-glsl';
 
 // List any dependencies here that you want to be pre-bundled. This avoids page reloads when loading
 // projects that use these dependencies.
@@ -27,7 +28,7 @@ function viteGlslify() {
 }
 
 export default defineConfig({
-    plugins: [sveltekit(), viteGlslify()],
+    plugins: [sveltekit(), glsl()],
     css: {
         preprocessorOptions: {
             scss: {

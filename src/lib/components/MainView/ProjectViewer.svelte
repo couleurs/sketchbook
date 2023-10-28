@@ -43,7 +43,7 @@
             if (context2D) currentContext = context2D;
         } else if (canvasElementWebGL && project.canvasType === CanvasType.WebGL) {
             currentCanvas = canvasElementWebGL;
-            const contextWebGL = canvasElementWebGL.getContext('webgl');
+            const contextWebGL = canvasElementWebGL.getContext('webgl2');
             if (contextWebGL) currentContext = contextWebGL;
         }
 
