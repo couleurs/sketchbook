@@ -11,3 +11,5 @@ export const load: PageServerLoad = (async ({ cookies, request }) => {
         requestUrl: request.url
     };
 }) satisfies PageServerLoad;
+
+export const ssr = false;

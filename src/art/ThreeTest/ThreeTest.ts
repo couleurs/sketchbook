@@ -50,7 +50,7 @@ export default class ThreeTest extends Project {
     depth_thickness = 5; // 0 to 10, step 0.1, "Depth Thickness"
     canvasType = CanvasType.WebGL;
 
-    on_resize(w, h) {
+    on_resize(w: number, h: number) {
       const dim = {
         x: h * ASPECT >= w ? w : h * ASPECT,
         y: w / ASPECT >= h ? h : w / ASPECT,
